@@ -1,0 +1,143 @@
+/* ===================================
+   RESET & ESTILOS GERAIS
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #0b0d14; /* Fundo escuro externo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ===================================
+   ESTRUTURA DO TELEMÓVEL
+   =================================== */
+.celular {
+  width: 320px;
+  height: 640px;
+  background-color: #11131e; /* Fundo do ecrã[span_1](start_span)[span_1](end_span) */
+  border-radius: 44px;
+  border: 10px solid #1e202e; /* Borda da carcaça */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
+              inset 0 0 12px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 16px;
+}
+
+/* Notch / Câmara Superior */
+.notch {
+  width: 120px;
+  height: 18px;
+  background-color: #1e202e;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Contentor do Conteúdo */
+.conteudo-celular {
+  width: 100%;
+  height: 100%;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ===================================
+   TÍTULO H1
+   =================================== */
+.titulo-senha {
+  color: #3b82f6;          /* Tom de azul das letras da imagem[span_2](start_span)[span_2](end_span) */
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* ===================================
+   TECLADO NUMÉRICO (GRID 2x2)
+   =================================== */
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Botões do Teclado */
+.btn-num {
+  width: 110px;
+  height: 95px;
+  border: none;
+  border-radius: 20px;
+  /* Gradiente e iluminação com base na imagem[span_3](start_span)[span_3](end_span) */
+  background: linear-gradient(135deg, #5b21eb 0%, #3273f6 100%);
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(50, 115, 246, 0.35);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.2s ease;
+  outline: none;
+}
+
+/* Efeito ao Clicar / Tocar */
+.btn-num:active {
+  transform: scale(0.93);
+  box-shadow: 0 4px 12px rgba(50, 115, 246, 0.2);
+  filter: brightness(1.2);
+}
+
+/* ===================================
+   MENSAGEM DE STATUS / FEEDBACK
+   =================================== */
+#mensagem {
+  color: #3b82f6;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+/* ===================================
+   BARRA HOME (INFERIOR)
+   =================================== */
+.barra-home {
+  width: 110px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* ===================================
+   ANIMAÇÃO DE ERRO (TREMER CELULAR)
+   =================================== */
+.erro {
+  animation: tremer 0.3s ease-in-out;
+}
+
+@keyframes tremer {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}

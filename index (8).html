@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="celular">
+  <div class="notch"></div>
+
+  <div class="conteudo-celular">
+    <!-- Novo Título H1 -->
+    <h1 class="titulo-senha">Digite sua senha</h1>
+
+    <!-- Teclado Numérico -->
+    <div class="teclado">
+      <button class="btn-num" onclick="adicionarNumero('1')" aria-live="polite">1</button>
+      <button class="btn-num" onclick="adicionarNumero('2')"aria-live="polite">2</button>
+      <button class="btn-num" onclick="adicionarNumero('3')"aria-live="polite">3</button>
+      <button class="btn-num" onclick="adicionarNumero('4')"aria-live="polite">4</button>
+    </div>
+
+    <!-- Mensagem de feedback (Erro ou Sucesso do JS) -->
+    <p id="mensagem"></p>
+  </div>
+
+  <div class="barra-home"></div>
+</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
